@@ -1,0 +1,29 @@
+{
+  "name": "nestcheck",
+  "version": "0.2.4",
+  "description": "A small utility to do a deep nest check on an object without throwing a TypeError",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Object",
+    "type",
+    "error",
+    "nest",
+    "check"
+  ],
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/jpiepkow/nestcheck.git"
+  },
+  "author": {
+    "name": "Jordan L Piepkow"
+  },
+  "license": "MIT",
+  "readme": "NestCheck\n===========\n\nnpm install nestcheck --save\n\nIn code:\nvar nest = require('nestcheck');\n\n\n##Description\n\nThis module is used to run a deep nest check on objects without throwing a TypeError.\n\nTwo functions exist. has and get\n\nhas returns a boolean value based on if the nest exists.\n\ngit returns the nested value if it exists and if not returns undefined.\n\n##has\n\nnest.has(OBJECT, 'string.of.nest.search') //returns true or false.\n\n##get\n\nnest.get(OBJECT, 'string.of.nest.search') //returns nest value or undefined\n\n##IMPORTANT\n\nDo not include base object name in string search. \n\nEx.\n\n\tvar Obj = {\n\t\tnested: { exists: true}\n\t}\n\t\n\tRIGHT\n\t--------------\n\tnest.has(Obj, 'nested.exists') //returns true\n\t\n\tWRONG\n\t--------------\n\tnest.has(Obj, 'Obj.nested') //will return false\n\n",
+  "readmeFilename": "README.md",
+  "_id": "nestcheck@0.2.3",
+  "_shasum": "2d4f49c6ac85c7c0bc3f675069d0dfafdb6c57dc",
+  "_from": "nestcheck@*"
+}
