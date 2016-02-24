@@ -1,5 +1,6 @@
 module.exports = {
     get: function (obj, key) {
+        if(!obj){return null};
         if (key.split('.').length === 1) {
             return (typeof obj == "undefined" || obj === null) ? obj : obj[key];
         } else {
@@ -9,6 +10,7 @@ module.exports = {
         }
     },
     has: function (obj, key) {
+            if(!obj){return false};
         if (key.split('.').length === 1) {
             if ((typeof obj[key] != "object" && typeof obj[key] != 'string') || obj[key] === null || !key in obj) {
                 return false

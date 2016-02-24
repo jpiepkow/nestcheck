@@ -1,6 +1,6 @@
 {
   "name": "nestcheck",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "A small utility to do a deep nest check on an object without throwing a TypeError",
   "main": "index.js",
   "scripts": {
